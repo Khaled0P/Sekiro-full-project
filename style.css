@@ -1,0 +1,317 @@
+@import url('https://fonts.cdnfonts.com/css/izayoi-monospaced');
+@import url('https://fonts.cdnfonts.com/css/kawashiro-gothic');
+@import url('https://fonts.cdnfonts.com/css/kamishirasawa-sans');
+@import url('https://fonts.cdnfonts.com/css/hakugyokurou-2004');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    
+}
+
+/*********** background and navbar ************/
+section.layer1 video{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -2;
+    filter: brightness(2);
+}
+
+nav div.navcontainer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, .8);
+    align-items: center;
+    padding: 0 30px;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+
+div.logo {
+    padding: 5px 20px;
+}
+
+div.navlinks ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    padding: 5px 0;
+}
+
+div.navlinks ul li{
+    padding: 5px
+}
+div.logo img{
+    width: 25%;
+}
+
+div.navlinks img{
+    width: 2.5rem;
+    height: 2.5rem;
+/*    filter: hue-rotate(160deg);*/
+    filter: brightness(40%) hue-rotate(160deg);
+}
+
+div.navlinks a {
+    text-decoration: none;
+    color: rgb(221, 221, 221);
+    font-size: 1.1rem;
+    font-family: 'Izayoi Monospaced', sans-serif;
+    padding: 0 6px;
+    position: relative;
+}
+
+div.navlinks a:hover{
+    text-shadow: 0 0 5px rgb(230, 0, 0), 0 0 12px rgb(230, 0, 0), 0 0 20px rgb(230, 0, 0);
+    
+    color: white;
+}
+
+
+div.navlinks a::after {
+content: "";
+position: absolute;
+background-image: linear-gradient(to right, rgb(82,40,19) , rgb(48,19,3));
+height: 2px;
+width: 0%;
+left: 0;
+bottom: -2px;
+transition: 0.3s;
+}
+
+div.navlinks a:hover::after{
+    width: 100%;
+}
+
+
+/*********************** first section *************************/
+div.layer2{
+    width: 85%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: rgba(0, 0, 0, .5);
+    margin: 10% auto 30%;
+    border-radius: 20px;
+    box-shadow: 0 0 2em rgb(69, 69, 69); /*wink wink*/
+    
+}
+.layer2 .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: 40vw;
+    margin: 3em 2em 3em 5em;
+}
+
+.layer2 .text h1{
+    font-family: 'Kawashiro Gothic', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 0 0 0.8em rgb(255, 255, 255);
+}
+
+.layer2 .text p {
+    font-family: serif;
+    line-height: 1.4;
+    font-size: 1.1em;
+}
+
+.layer2 .image{
+    width: 50vw;
+    margin: 3em 0;
+}
+
+.layer2 .image img{
+    width: 35vw;
+    display: flex;
+    margin: auto;
+}
+
+.layer2 .join-btn{
+    background-color: rgba(77, 26, 0, .7);
+    padding: 1em 3em;
+    border-radius: 35px;
+    border: 3px solid white;
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+}
+
+.layer2 a{margin-top: 60px;}
+
+.layer2 .join-btn:hover{
+    transform: translateY(-3px);
+    -webkit-box-shadow: 0px 0px 30px 0 rgba(153, 0, 0,1);
+    -moz-box-shadow: 0px 0px 30px 0 rgba(153, 0, 0,1);
+    box-shadow: 0px 0px 30px 0 rgba(153, 0, 0,1);
+    transition: 0.3s;
+    background-color: lighten(rgba(77, 26, 0, .7));
+}
+
+
+/*********************** second section *************************/
+
+section.layer3{
+    background: rgb(82,40,19);
+    background: linear-gradient(180deg, rgba(82,40,19,1) 0%, rgba(59,26,8,1) 30%, rgba(48,19,3,1) 70%); 
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.layer3 h1{
+    font-family: sans-serif;
+    font-size: 2em;
+    font-weight: 400;
+    margin: 1em;
+    color: white;
+}
+
+.layer3 .categories{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-bottom: 2.5em;
+}
+
+.categories .cat-col{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1.5em;
+}
+
+
+.cat-col .cat-img img{
+    border: 2px solid white;
+    border-radius: 1em;
+}
+
+.cat-col .cat-img img:hover{
+    transform: scale(105%,105%);
+    -webkit-box-shadow: 0px 0px 30px 2px rgba(153, 0, 0,1);
+    -moz-box-shadow: 0px 0px 30px 2px rgba(153, 0, 0,1);
+    box-shadow: 0px 0px 30px 2px rgba(153, 0, 0,1);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.cat-col .description{
+    color: white;
+    font-size: 1.2em;
+    font-family: 'Izayoi Monospaced', sans-serif;
+    text-align: center;
+    font-weight: bold;
+    padding-top: .8em;
+}
+
+.resize{
+    height:220px;
+    width: 180px;
+}
+/*********************** third section *************************/
+
+section.layer4{
+    background-image: url(attachments/background.jpg);
+    object-fit: cover;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.layer4 .quote{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 13em 0;
+    text-shadow: 0 0 1em black, 0 0 2em black;
+    font-family: 'Hakugyokurou 2004', sans-serif;
+    letter-spacing: .1em;
+}
+
+.quote h1{
+    font-size: 1.8em;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.quote h2{
+    font-size:1.5em;
+}
+
+/********************* fourth section ******************************/
+
+section.layer5{
+    width: 100%;
+    background: linear-gradient(180deg, rgb(82,40,19), rgb(48,19,3));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3em 0;
+    
+}
+
+.layer5 .join{
+    background-color: #333333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em 3em;
+    border-radius: 1em;
+}
+
+.layer5 .text{
+    font-family: serif, sans-serif;
+    color: white;
+    padding: 1em;
+    margin: 0 5em 0 1em;
+}
+
+.layer5 .signup-btn{
+    background-color: #333333;
+    color: white;
+    padding: .8em 1.8em;
+    font-size: 1.1em;
+    border-radius: .5em;
+    border: 2px solid white;
+}
+
+.layer5 .signup-btn:hover{
+    cursor: pointer;
+    filter: brightness(120%);
+}
+
+footer.credit{
+    background-color: black;
+    padding: 1em;
+}
+footer.credit p{
+    text-align: center;
+}
+footer.credit a{
+    color: white;
+    font-family: 'Izayoi Monospaced', sans-serif;
+}
