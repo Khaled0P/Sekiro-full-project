@@ -46,10 +46,18 @@ div.navlinks ul{
 }
 
 div.navlinks ul li{
-    padding: 5px
+    padding: 5px;
+    display: flex;
+    align-items: center;
 }
+
+
 div.logo img{
-    width: 25%;
+    width: 119.250px;
+}
+
+div.navlinks div.dropDownIcon{
+    display: none;
 }
 
 div.navlinks img{
@@ -68,14 +76,14 @@ div.navlinks a {
     position: relative;
 }
 
-div.navlinks a:hover{
+div.navlinks li a:hover{
     text-shadow: 0 0 5px rgb(230, 0, 0), 0 0 12px rgb(230, 0, 0), 0 0 20px rgb(230, 0, 0);
     
     color: white;
 }
 
 
-div.navlinks a::after {
+div.navlinks li a::after {
 content: "";
 position: absolute;
 background-image: linear-gradient(to right, rgb(82,40,19) , rgb(48,19,3));
@@ -86,7 +94,7 @@ bottom: -2px;
 transition: 0.3s;
 }
 
-div.navlinks a:hover::after{
+div.navlinks li a:hover::after{
     width: 100%;
 }
 
@@ -314,4 +322,108 @@ footer.credit p{
 footer.credit a{
     color: white;
     font-family: 'Izayoi Monospaced', sans-serif;
+}
+
+/*********** mobile design *************/
+
+@media screen and (max-width: 950px){
+    
+    div.navlinks ul.navMenu{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 2.55em;
+        right: 0;
+    }
+    
+    div.navlinks ul.navMenu li{
+        display: none;
+    }
+    
+    div.navlinks div.dropDownIcon{
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    
+    div.navlinks div.dropDownIcon a{
+        font-size: 1.7em;
+        padding: 7px
+    }
+    div.dropDownIcon a:hover{
+        text-shadow: 0 0 5px rgb(230, 0, 0), 0 0 12px rgb(230, 0, 0), 0 0 20px rgb(230, 0, 0);
+    }
+    
+    div.navlinks ul.navMenu.dropDownMenu li{
+        display: block;
+        width: 100%;
+        background-color: rgba(0,0,0,.8);
+        padding: .7em;
+    }
+    
+    div.navlinks img{
+        display: none;
+    }
+    
+    nav div.navcontainer{
+        padding: 0;
+    }
+/************ layer 2   ***************/
+    div.layer2{
+        flex-direction: column;
+    }
+    
+    div.layer2 div.text{
+        width: 100%;
+        margin: 0;
+        padding: 1em 2em;
+    }
+    
+    div.layer2 .text p{
+        padding: 1em;
+        text-align: center;
+    }
+    
+    .layer2 .image{
+        width: 100%;
+    }
+    
+    .layer2 .image img{
+        width: 65vw;
+    }
+    
+/************* layer 3 & 4 **************/
+    
+    section.layer3 h1{
+        text-align: center;
+    }
+    
+    .layer3 div.categories{
+        flex-wrap: wrap;
+    }
+    
+    .layer4 .quote{
+        padding: 0 1.5px;
+    }
+    
+    
+/**************layer 5*****************/
+    
+    .layer5 .join{
+        padding: 1em;
+    }
+    
+    .join .text{
+        margin: 0;
+        
+    }
+    .join .text h1{
+        margin-bottom: .6em;
+    }
+    
+    .layer5 .signup-btn{
+        padding: 8px 5px;
+        width: 5em;
+    }
 }
